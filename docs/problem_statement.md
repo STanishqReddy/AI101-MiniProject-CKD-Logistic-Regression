@@ -16,11 +16,9 @@ The project will also involve data preprocessing, model training, testing and ev
 ## Dataset Information
 - Dataset name: Chronic Kidney Disease Dataset
 - Dataset source: Chronic_Kidney_Disease_data.csv (provided in the GitHub repository)
-- Number of records: To be verified from the CSV file
-- Number of columns: To be verified from the CSV file
-- Target column: To be verified from the CSV file
-
-## Algorithm
+- Number of records: 1659
+- Number of columns: 54
+- Target column: Diagnosis
 Logistic Regression
 
 ## Expected Outcome
