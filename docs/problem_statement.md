@@ -19,7 +19,7 @@ The project will also involve data preprocessing, model training, testing and ev
 - Number of records: 1659
 - Number of columns: 54
 - Target column: Diagnosis
-Logistic Regression
+
 
 ## Expected Outcome
 Build an educational machine learning model that predicts the CKD target class using Logistic Regression.
