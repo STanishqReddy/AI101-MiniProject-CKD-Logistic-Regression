@@ -8,7 +8,7 @@
 
 | Team Member | GitHub | Role | Core Responsibility |
 | :--- | :--- | :--- | :--- |
-| **SUDA TANISHQ REDDY** | [@STanishqReddy](https://github.com) | 📝 Documentation Lead | Dataset exploration, README architecture, & notebook integration |
+| **SUDA TANISHQ REDDY** | [@STanishqReddy](https://github.com) | 📝 Documentation Lead | Dataset exploration, README architecture, Github & notebook integration |
 | **ABHISHEK** | [@WebDevbyAbhi](https://github.com) | ⚙️ Execution Lead | Conda environment setup, dependency management, & preprocessing |
 | **PRABHNOOR KATARIA** | [@prabhnoor-wml](https://github.com) | 📊 PPT Lead | Logistic Regression model architecture, training, & deck preparation |
 | **DAVULURI VINOD** | [@Vinod-Davuluri](https://github.com) | 🎬 Video Lead | Model evaluation (ROC/PR curves), metrics analysis, & video demo |
@@ -147,6 +147,32 @@ After successfully executing the notebook, you should be able to see:
 - ROC Curve and Precision-Recall Curve.
 
 **Note:** Run the notebook from the project directory so that the dataset's relative file path works correctly.
+### ✅ Training Visualisations
+
+The following graphs are saved in the training_plots/ directory:
+
+- #### 📈 Learning Curve
+
+  ![Leaning Curve](./training_plots/learning_curve.png)
+
+  #### Training Evaluation: Learning Curve Insights
+
+### **Understanding the Logistic Regression Learning Curve**
+
+* **Overfitting with Small Data:** At the start (around 200 data points), the model shows a massive gap between the **Training Score (Blue)** and the **Validation Score (Orange)**. It performs nearly perfectly on the data it knows but poorly on new data, meaning it overfits when data is scarce.
+* **Improvement with More Data:** As the training set size increases toward 1,000 samples, the orange validation line steadily climbs. This proves that feeding more patient records into the model directly improves its ability to make accurate real-world predictions.
+* **The Complexity Plateau:** Even at its maximum size of 1,000 samples, the validation score flattens out at around a **0.64 F1-Score**, and the training score continues to drop. This tells us the model has reached its limit; a simple straight decision boundary (Logistic Regression) is hitting a structural ceiling and cannot fully capture the complex, hidden relationships inside this kidney disease dataset.
+
+- #### 📈 Loss Curve
+  ![Loss Curve](./training_plots/loss_curve.png)
+
+  #### Training Evaluation: Loss Curve Insights
+
+### **Key Takeaways from the Loss Curve**
+
+* **Initial Optimization Challenge:** At the smallest training size, the **Validation Loss (Orange)** is exceptionally high (~0.42), while the **Training Loss (Blue)** is unusually low (~0.12). This massive gap indicates the model heavily overfits the training subset and generalizes very poorly to unseen patient records early on.
+* **Convergence with Scaled Data:** As more patient data is introduced (moving past 400 training samples), the curves dramatically converge. The training loss rises and the validation loss falls steadily, showing that the model becomes more stable and realistic as the sample volume grows.
+* **High Final Bias / Error Floor:** Even at the maximum training size of 1,000 samples, both losses plateau and flatten out at a relatively high value (~0.23). The lines running flat and parallel without dropping further indicates high bias; the linear model cannot minimize the loss any further because it lacks the mathematical complexity to map the full spectrum of risk factors in the dataset.
 
 ### ✅ Evaluation Visualizations
 
@@ -212,7 +238,7 @@ To complement our ROC analysis, we evaluated the model using a **Precision-Recal
 The PR curve explicitly shows how aggressively we can catch disease cases without overwhelming doctors with false alarms:
 * **High Recall (Comprehensive Screening):** We can push the model to a Recall of 1.0 (catching 100% of the CKD patients in the dataset) while still maintaining a Precision of approximately 0.92. This ensures maximum patient coverage with minimal false positives.
 * **High Precision (Definitive Diagnosis):** By selecting thresholds at the top of the curve, we achieve a Precision of 1.00. Any patient flagged at this setting is guaranteed to have CKD, making it ideal for automating high-confidence clinical alerts.
-*
+
 These visualizations help understand the classification performance of the trained model.
 
 ### 📊 Project Presentation
@@ -225,7 +251,7 @@ Our project presentation contains the problem statement, dataset overview, metho
 
 The demonstration video explains the project workflow, model execution, evaluation results and team contributions.
 
- Video: [Add accessible video link here]
+ Video: [Add accessible video linkhere]
 
 ### 🤖 AI Tools Usage and Disclosure
 AI tools were used as supporting resources during the development of this project.
