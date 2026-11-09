@@ -148,9 +148,67 @@ After successfully executing the notebook, you should be able to see:
 
 The following graphs are saved in the results/ directory:
 
-- roc_curve.png
-- precision_recall_curve.png
+- #### 📈 Confusion Matrix
 
+  ![Confusuion Matrix](./results/confusion_matrix.png)
+
+  #### Model Evaluation: Confusion Matrix Insights
+
+The confusion matrix visually demonstrates how well our machine learning model distinguishes between patients with Chronic Kidney Disease (**CKD**) and healthy individuals (**No CKD**). 
+
+##### 📊 Matrix Breakdown
+* **True Positives (TP) = 298:** The model correctly identified 298 individuals who actually have Chronic Kidney Disease.
+* **True Negatives (TN) = 7:** The model correctly identified 7 individuals who do not have Chronic Kidney Disease.
+* **False Positives (FP) = 20:** The model incorrectly flagged 20 healthy individuals as having Chronic Kidney Disease.
+* **False Negatives (FN) = 7:** The model missed 7 patients who actually have Chronic Kidney Disease, incorrectly predicting them as healthy.
+
+##### 📈 Key Performance Indicators
+* **Overall Accuracy (~91.87%):** Out of 332 total patients in the test set, the model made the correct prediction nearly 92% of the time.
+* **High Sensitivity / Recall (~97.70%):** The model successfully captured the vast majority of positive CKD cases. In medical diagnostics, a high recall rate is critical because it ensures that very few sick patients go unnoticed.
+* **Balanced Precision (~93.71%):** When the model predicts a patient has CKD, it is highly reliable, with low rates of false alarms.
+
+##### 🔍 Project Observation
+While the overall accuracy and recall are highly promising for medical screening, the dataset appears to be heavily imbalanced toward positive CKD cases (305 CKD vs. 27 No CKD). Future work could explore balancing techniques like SMOTE or gathering more control samples to further enhance the model's ability to accurately predict healthy cases.
+
+- #### 📈 ROC Curve
+
+  ![ROC Curve](./results/roc_curve.png)
+
+#### Model Evaluation: ROC Curve Analysis
+
+To assess the performance of our **Chronic Kidney Disease (CKD)** prediction model, we plotted the **Receiver Operating Characteristic (ROC)** curve and calculated the **Area Under the Curve (AUC)** shown above. 
+
+##### Key Insights & Performance Interpretation:
+
+* **Discriminative Power ($\text{AUC} = 0.836$):** The model achieves an AUC of **0.836**, indicating **good overall classification performance**. This means there is an **83.6% probability** that the model will correctly assign a higher disease risk score to a randomly selected CKD patient than to a healthy individual.
+* **Comparison Against Baseline:** The blue step-curve sits substantially above the red dashed diagonal line ($\text{AUC} = 0.50$), confirming that the model performs significantly better than random guessing and has successfully captured relevant predictive patterns from the Kaggle dataset.
+* **Step-Like Behavior:** The jagged, stair-step appearance of the curve is a characteristic visual artifact caused by a discrete, finite sample size in our test evaluation set as the classification threshold shifts.
+
+##### Clinical Implementation & Threshold Tuning:
+Depending on the clinical deployment goals, we can use this curve to fine-tune our classification threshold:
+* **Screening Mode (High Sensitivity):** We can move along the curve to maximize the **True Positive Rate** to ensure early stages of CKD are rarely missed, minimizing dangerous False Negatives.
+* **Diagnostic Mode (High Specificity):** Alternatively, we can adjust the threshold to minimize **False Positives**, protecting healthy patients from unnecessary anxiety and costly follow-up medical testing.
+
+
+- #### 📈 Precision Recall Curve
+
+  ![Precision Recall Curve](./results/precision_recall_curve.png)
+
+  #### Model Evaluation: Precision-Recall (PR) Curve Analysis
+
+To complement our ROC analysis, we evaluated the model using a **Precision-Recall (PR) Curve** and calculated the **Average Precision (AP)** score. While ROC curves can sometimes provide an overly optimistic view on imbalanced datasets, the PR curve focuses directly on the prediction quality of the positive class (patients with Chronic Kidney Disease).
+
+##### Key Insights & Performance Interpretation:
+
+* **Exceptional Precision Quality ($\text{AP} = 0.981$):** The model achieves an outstanding Average Precision of **0.981**. This means that across all operational thresholds, the model maintains an extremely high ratio of true positive predictions compared to total positive predictions, minimizing false alarms.
+* **Zoomed-In Precision Axis:** Note that the precision axis is focused heavily on the high-end spectrum (**0.92 to 1.00**). Even as the model's capacity to find all sick patients increases (moving along the Recall axis from 0.0 to 1.0), the precision remains remarkably stable and drops no lower than roughly 0.92.
+* **Data Imbalance Robustness:** In medical diagnostics, datasets are frequently imbalanced (fewer positive disease cases than healthy ones). An AP score of nearly 0.98 confirms that our model's high performance is robust and highly dependable, avoiding the pitfalls of false positives that could lead to clinical over-diagnosis.
+
+##### Clinical Implementation & Threshold Tuning:
+The PR curve explicitly shows how aggressively we can catch disease cases without overwhelming doctors with false alarms:
+* **High Recall (Comprehensive Screening):** We can push the model to a Recall of 1.0 (catching 100% of the CKD patients in the dataset) while still maintaining a Precision of approximately 0.92. This ensures maximum patient coverage with minimal false positives.
+* **High Precision (Definitive Diagnosis):** By selecting thresholds at the top of the curve, we achieve a Precision of 1.00. Any patient flagged at this setting is guaranteed to have CKD, making it ideal for automating high-confidence clinical alerts.
+*
 These visualizations help understand the classification performance of the trained model.
 
 ### 📊 Project Presentation
