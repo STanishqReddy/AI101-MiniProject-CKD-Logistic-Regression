@@ -1,4 +1,4 @@
-# 🏥 AI101-MiniProject-CKD-Logistic-Regression
+# 🏥 AI101-MiniProject-CKD-Logistic-Regression (Group-26)
 > **Predicting Chronic Kidney Disease (CKD)** using advanced Logistic Regression modeling.  
 > *An AI101 Mini-Project | IIT Ropar*
 
@@ -143,3 +143,40 @@ After successfully executing the notebook, you should be able to see:
 - ROC Curve and Precision-Recall Curve.
 
 **Note:** Run the notebook from the project directory so that the dataset's relative file path works correctly.
+
+### ✅ Evaluation Visualizations
+
+The following graphs are saved in the results/ directory:
+
+- roc_curve.png
+- precision_recall_curve.png
+
+These visualizations help understand the classification performance of the trained model.
+
+### 📊 Project Presentation
+
+Our project presentation contains the problem statement, dataset overview, methodology, model results, team contributions and key learnings.
+
+ Presentation: https://gamma.app/docs/Chronic-Kidney-Disease-prediction-using-Logistic-Regression-gokp4hfrabke7q6
+
+### 🎬 Project Demonstration Video
+
+The demonstration video explains the project workflow, model execution, evaluation results and team contributions.
+
+ Video: [Add accessible video link here]
+
+### 🤖 AI Tools Usage and Disclosure
+AI tools were used as supporting resources during the development of this project.
+
+Purpose of AI usage:
+
+- Understanding Python programming and machine learning concepts.
+- Getting explanations of pandas and scikit-learn functions.
+- Assistance with debugging and improving code.
+- Organizing project documentation and presentation content.
+
+#### ⚠️ Verification:
+
+The team reviewed and tested the code and project outputs. Each team member is responsible for understanding their contributions and the overall project workflow.
+
+AI tools were used to support learning and development, not to replace the team's understanding and implementation.
