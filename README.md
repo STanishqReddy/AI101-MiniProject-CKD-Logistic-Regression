@@ -20,20 +20,24 @@
 ```text
 AI101-MiniProject-CKD-Logistic-Regression/
 ├── 📁 docs/                         # Project blueprint & documentation
-│   ├── problem_statement.md
 │   ├── demo_plan.md
-│   └── model_evaluation_plan.md
+│   ├── model_evaluation_plan.md
+│   └── problem_statement.md
 ├── 📁 presentation/                 # Slide decks & presentation materials
+│   ├── CKD_Project_Presentation.pdf
 │   └── CKD_Project_Presentation.pptx
-├── 📁 results/                      # Performance visualization exports
+├── 📁 results/     
+│   ├──confusion_matrix.png            # Performance visualization exports
 │   ├── precision_recall_curve.png
 │   └── roc_curve.png
-├── 📁 video/                        # Final video demonstration output
+├── 📁 video/   
+│   └── video_link.txt               # Final video demonstration output
+├── 🔏 .gitignore
 ├── 📊 Chronic_Kidney_Disease_data.csv
 ├── 📓 CKD_Logistic_Regression.ipynb
 ├── 📦 environment.yml
-├── 📋 requirements.txt
-└── 📝 README.md
+├── 📋 README.md
+└── 📝 requirements.txt
 ```
 
 ---
