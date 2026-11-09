@@ -1,1 +1,17 @@
+# Project dependencies for CKD logistic regression notebook
 
+# Notebook runtime
+ipykernel==7.3.0
+ipython==9.17.1
+jupyter==1.1.1
+
+# Data processing and ML
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+
+# Visualization
+matplotlib==3.11.2
+seaborn==0.13.2
+pillow==12.3.0
