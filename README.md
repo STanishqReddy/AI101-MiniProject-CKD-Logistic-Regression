@@ -26,10 +26,13 @@ AI101-MiniProject-CKD-Logistic-Regression/
 ├── 📁 presentation/                 # Slide decks & presentation materials
 │   ├── CKD_Project_Presentation.pdf
 │   └── CKD_Project_Presentation.pptx
-├── 📁 results/     
-│   ├──confusion_matrix.png            # Performance visualization exports
+├── 📁 results/                       # Performance visualization exports
+│   ├──confusion_matrix.png           
 │   ├── precision_recall_curve.png
 │   └── roc_curve.png
+├── 📁 training_plots/                
+│   ├── learning_curve.png
+│   └── loss_curve.png
 ├── 📁 video/   
 │   └── video_link.txt               # Final video demonstration output
 ├── 🔏 .gitignore
