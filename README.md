@@ -251,7 +251,7 @@ Our project presentation contains the problem statement, dataset overview, metho
 
 The demonstration video explains the project workflow, model execution, evaluation results and team contributions.
 
- Video: [Add accessible video linkhere]
+ Video: [Add accessible video link here]
 
 ### 🤖 AI Tools Usage and Disclosure
 AI tools were used as supporting resources during the development of this project.
