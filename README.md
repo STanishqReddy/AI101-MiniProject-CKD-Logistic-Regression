@@ -70,7 +70,7 @@ AI101-MiniProject-CKD-Logistic-Regression/
 
 ### Python Version
 
-This project uses **Python 3.13.16**.
+This project uses **Python 3.10.22**.
 
 ### Requirements
 
@@ -98,36 +98,45 @@ Follow these commands in the given order.
 
 **Step 1: Clone the GitHub repository**
 
-```bash
+1.1: Identify Present Working Directory
+```anaconda promt
+pwd
+```
+1.2: Navigate to a known directory or Desktop (wherever Python extensions are installed) 
+```anaconda promt
+cd .. or cd <PATH/>
+```
+1.3: Clone the Repository
+```anaconda prompt
 git clone https://github.com/STanishqReddy/AI101-MiniProject-CKD-Logistic-Regression.git
 ```
 
 **Step 2: Navigate to the project directory**
 
-```bash
+```anaconda promt
 cd AI101-MiniProject-CKD-Logistic-Regression
 ```
 
-**Step 3: Create a Conda environment with Python 3.13.16**
+**Step 3: Create a Conda environment with Python 3.10.22**
 
-```bash
-conda create -n ckd-ai101 python=3.13.16
+```anaconda prompt
+conda create -n ckd-ai101 python=3.10.22
 ```
 
 **Step 4: Activate the environment**
 
-```bash
+```bash anaconda prompt
 conda activate ckd-ai101
 ```
 
 **Step 5: Install all required dependencies**
 
-```bash
+```anaconda prompt
 pip install -r requirements.txt
 ```
 
 **Step 6: Launch Jupyter Notebook**
-
+#### Open project directory(folder) with VScode
 ```bash
 jupyter notebook
 ```
