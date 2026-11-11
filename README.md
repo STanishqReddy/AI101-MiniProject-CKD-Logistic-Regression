@@ -90,6 +90,7 @@ The main libraries used in this project are:
 Before running the project, make sure you have installed:
 
 - [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install)
+- anaconda prompt
 - Git
 
 ## ▶️ Steps to Run the Project
@@ -99,44 +100,72 @@ Follow these commands in the given order.
 **Step 1: Clone the GitHub repository**
 
 1.1: Identify Present Working Directory
+<div style="background-color: #2b2b2b; color: #ffffff; padding: 6px 12px; font-family: monospace; font-size: 12px; border-radius: 5px 5px 0 0; margin-bottom: -14px; border-bottom: 1px solid #444;">
+  anaconda prompt
+</div>
+
 ```anaconda promt
-pwd
+cd
 ```
 1.2: Navigate to a known directory or Desktop (wherever Python extensions are installed) 
+<div style="background-color: #2b2b2b; color: #ffffff; padding: 6px 12px; font-family: monospace; font-size: 12px; border-radius: 5px 5px 0 0; margin-bottom: -14px; border-bottom: 1px solid #444;">
+  anaconda prompt
+</div>
+
 ```anaconda promt
 cd .. or cd <PATH/>
 ```
 1.3: Clone the Repository
+<div style="background-color: #2b2b2b; color: #ffffff; padding: 6px 12px; font-family: monospace; font-size: 12px; border-radius: 5px 5px 0 0; margin-bottom: -14px; border-bottom: 1px solid #444;">
+  anaconda prompt
+</div>
+
 ```anaconda prompt
 git clone https://github.com/STanishqReddy/AI101-MiniProject-CKD-Logistic-Regression.git
 ```
 
 **Step 2: Navigate to the project directory**
+<div style="background-color: #2b2b2b; color: #ffffff; padding: 6px 12px; font-family: monospace; font-size: 12px; border-radius: 5px 5px 0 0; margin-bottom: -14px; border-bottom: 1px solid #444;">
+  anaconda prompt
+</div>
 
 ```anaconda promt
 cd AI101-MiniProject-CKD-Logistic-Regression
 ```
 
 **Step 3: Create a Conda environment with Python 3.10.22**
+<div style="background-color: #2b2b2b; color: #ffffff; padding: 6px 12px; font-family: monospace; font-size: 12px; border-radius: 5px 5px 0 0; margin-bottom: -14px; border-bottom: 1px solid #444;">
+  anaconda prompt
+</div>
 
 ```anaconda prompt
 conda create -n ckd-ai101 python=3.10.22
 ```
 
 **Step 4: Activate the environment**
+<div style="background-color: #2b2b2b; color: #ffffff; padding: 6px 12px; font-family: monospace; font-size: 12px; border-radius: 5px 5px 0 0; margin-bottom: -14px; border-bottom: 1px solid #444;">
+  anaconda prompt
+</div>
 
-```bash anaconda prompt
+```anaconda prompt
 conda activate ckd-ai101
 ```
 
 **Step 5: Install all required dependencies**
+<div style="background-color: #2b2b2b; color: #ffffff; padding: 6px 12px; font-family: monospace; font-size: 12px; border-radius: 5px 5px 0 0; margin-bottom: -14px; border-bottom: 1px solid #444;">
+ anaconda prompt
+</div>
 
-```anaconda prompt
+```anaconda
 pip install -r requirements.txt
 ```
 
 **Step 6: Launch Jupyter Notebook**
 #### Open project directory(folder) with VScode
+<div style="background-color: #2b2b2b; color: #ffffff; padding: 6px 12px; font-family: monospace; font-size: 12px; border-radius: 5px 5px 0 0; margin-bottom: -14px; border-bottom: 1px solid #444;">
+  bash
+</div>
+
 ```bash
 jupyter notebook
 ```
@@ -263,7 +292,7 @@ Our project presentation contains the problem statement, dataset overview, metho
 
 The demonstration video explains the project workflow, model execution, evaluation results and team contributions.
 
- Video: [Add accessible video link here]
+ Video: https://youtu.be/IHN4iqdUIio?si=kJGYaM7Sjslzhwci
 
 ### 🤖 AI Tools Usage and Disclosure
 AI tools were used as supporting resources during the development of this project.
